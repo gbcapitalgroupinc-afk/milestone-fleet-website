@@ -6,7 +6,7 @@ export default function MilestoneFleetEliteWebsite() {
   const [formState, setFormState] = useState({ status: "idle", error: null });
   const [formData, setFormData] = useState({ name: "", email: "", intendedUse: "", message: "" });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
